@@ -1,0 +1,246 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: http://www.h2database.com/html/cheatSheet.html
+Subject: H2 Database Engine
+Date: Wed, 8 Feb 2023 07:14:10 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--sKDHhc0lfvsxYshBwug2K4A6Qniu3jUqPDvKSapU7l----"
+
+
+------MultipartBoundary--sKDHhc0lfvsxYshBwug2K4A6Qniu3jUqPDvKSapU7l----
+Content-Type: text/html
+Content-ID: <frame-1F43199009E100AC8E4D2293B9669EE1@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.h2database.com/html/cheatSheet.html
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd"><!--
+Copyright 2004-2022 H2 Group. Multiple-Licensed under the MPL 2.0,
+and the EPL 1.0 (https://h2database.com/html/license.html).
+Initial Developer: H2 Group
+--><html xmlns=3D"http://www.w3.org/1999/xhtml" lang=3D"en" xml:lang=3D"en"=
+><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUT=
+F-8"><link rel=3D"stylesheet" type=3D"text/css" href=3D"cid:css-7d239e06-f2=
+db-4961-b3d5-cc54e13e7b21@mhtml.blink" />
+
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"=
+>
+<title>
+H2 Database Engine
+</title>
+
+</head><body>
+
+<div style=3D"width:780px; margin:0 auto;">
+
+<h1>H2 Database Engine Cheat Sheet</h1>
+<div style=3D"float:left; margin:5px; width:370px;">
+
+<h2>Using H2</h2>
+<ul><li><a href=3D"https://h2database.com/">H2</a> is
+    <a href=3D"https://github.com/h2database/h2database">open source</a>,
+    <a href=3D"http://www.h2database.com/html/license.html">free to use and=
+ distribute</a>.
+</li><li><a href=3D"https://h2database.com/html/download.html">Download</a>=
+:
+    <a href=3D"https://repo1.maven.org/maven2/com/h2database/h2/2.1.214/h2-=
+2.1.214.jar" class=3D"link">jar</a>,
+    <a href=3D"https://github.com/h2database/h2database/releases/download/v=
+ersion-2.1.214/h2-setup-2022-06-13.exe" class=3D"link">installer (Windows)<=
+/a>,
+    <a href=3D"https://github.com/h2database/h2database/releases/download/v=
+ersion-2.1.214/h2-2022-06-13.zip" class=3D"link">zip</a>.
+</li><li>To start the
+    <a href=3D"http://www.h2database.com/html/quickstart.html#h2_console">H=
+2 Console tool</a>, double click the jar file, or
+    run <code class=3D"notranslate">java -jar h2*.jar</code>, <code class=
+=3D"notranslate">h2.bat</code>, or <code class=3D"notranslate">h2.sh</code>=
+.
+</li><li><a href=3D"http://www.h2database.com/html/tutorial.html#creating_n=
+ew_databases">A new database is automatically created</a>
+    <a href=3D"http://www.h2database.com/html/features.html#database_only_i=
+f_exists">by default if an embedded URL is used</a>.
+</li><li><a href=3D"http://www.h2database.com/html/features.html#closing_a_=
+database">Closing the last connection closes the database</a>.
+</li></ul>
+
+<h2>Documentation</h2>
+<p>
+Reference:
+<a href=3D"http://www.h2database.com/html/grammar.html" class=3D"link">SQL =
+grammar</a>,
+<a href=3D"http://www.h2database.com/html/functions.html" class=3D"link">fu=
+nctions</a>,
+<a href=3D"http://www.h2database.com/html/datatypes.html" class=3D"link">da=
+ta types</a>,
+<a href=3D"http://www.h2database.com/html/tutorial.html#command_line_tools"=
+ class=3D"link">tools</a>,
+<a href=3D"http://www.h2database.com/javadoc/index.html" class=3D"link">API=
+</a>
+<br>
+<a href=3D"http://www.h2database.com/html/features.html">Features</a>:
+<a href=3D"http://www.h2database.com/html/tutorial.html#fulltext" class=3D"=
+link">fulltext search</a>,
+<a href=3D"http://www.h2database.com/html/features.html#file_encryption" cl=
+ass=3D"link">encryption</a>,
+<a href=3D"http://www.h2database.com/html/features.html#read_only" class=3D=
+"link">read-only</a>
+<a href=3D"http://www.h2database.com/html/features.html#database_in_zip" cl=
+ass=3D"link">(zip/jar)</a>,
+<a href=3D"http://www.h2database.com/html/tutorial.html#csv" class=3D"link"=
+>CSV</a>,
+<a href=3D"http://www.h2database.com/html/features.html#auto_reconnect" cla=
+ss=3D"link">auto-reconnect</a>,
+<a href=3D"http://www.h2database.com/html/features.html#triggers" class=3D"=
+link">triggers</a>,
+<a href=3D"http://www.h2database.com/html/features.html#user_defined_functi=
+ons" class=3D"link">user functions</a>
+</p>
+
+<h2><a href=3D"http://www.h2database.com/html/features.html#database_url">D=
+atabase URLs</a></h2>
+<p>
+<b><a href=3D"http://www.h2database.com/html/features.html#connection_modes=
+">Embedded</a></b><br>
+<code class=3D"notranslate">jdbc:h2:~/test</code> 'test' in the user home d=
+irectory<br>
+<code class=3D"notranslate">jdbc:h2:/data/test</code> 'test' in the directo=
+ry /data<br>
+<code class=3D"notranslate">jdbc:h2:./test</code> in the current(!) working=
+ directory<br>
+</p><p>
+<b><a href=3D"http://www.h2database.com/html/features.html#in_memory_databa=
+ses">In-Memory</a></b><br>
+<code class=3D"notranslate">jdbc:h2:mem:test</code> multiple connections in=
+ one process,
+database is removed when all connections are closed<br>
+<code class=3D"notranslate">jdbc:h2:mem:test;DB_CLOSE_DELAY=3D-1</code> mul=
+tiple connections in one process,
+database in not removed when all connections are closed
+(<a href=3D"http://www.h2database.com/html/features.html#in_memory_database=
+s">may create a memory leak</a>)<br>
+<code class=3D"notranslate">jdbc:h2:mem:</code> unnamed private; one connec=
+tion<br>
+</p><p>
+<b><a href=3D"http://www.h2database.com/html/tutorial.html#using_server">Se=
+rver Mode</a></b><br>
+<code class=3D"notranslate">jdbc:h2:tcp://localhost/~/test</code> user home=
+ dir<br>
+<code class=3D"notranslate">jdbc:h2:tcp://localhost//data/test</code> or <c=
+ode class=3D"notranslate">jdbc:h2:tcp://localhost/D:/data/test</code> absol=
+ute dir<br>
+<a href=3D"http://www.h2database.com/html/tutorial.html#using_server">Serve=
+r start</a>:<code class=3D"notranslate">java -cp *.jar org.h2.tools.Server<=
+/code>
+</p><p>
+<b><a href=3D"http://www.h2database.com/html/features.html#database_url">Se=
+ttings</a></b><br>
+<code class=3D"notranslate">jdbc:h2:..;MODE=3DMySQL;DATABASE_TO_LOWER=3DTRU=
+E</code>
+<a href=3D"http://www.h2database.com/html/features.html#compatibility">comp=
+atibility (or HSQLDB,...)</a><br>
+<code class=3D"notranslate">jdbc:h2:..;TRACE_LEVEL_FILE=3D3</code> <a href=
+=3D"http://www.h2database.com/html/features.html#trace_options">log to *.tr=
+ace.db</a><br>
+</p>
+
+</div>
+<div style=3D"float:right; padding:5px; width:370px;">
+
+<h2><a href=3D"http://www.h2database.com/html/tutorial.html#connecting_usin=
+g_jdbc">Using the JDBC API</a></h2>
+<pre class=3D"notranslate">Connection conn =3D DriverManager.
+    getConnection("jdbc:h2:~/test");
+conn.close();
+</pre>
+
+<h2><a href=3D"http://www.h2database.com/html/tutorial.html#connection_pool=
+">Connection Pool</a></h2>
+<pre class=3D"notranslate">import org.h2.jdbcx.JdbcConnectionPool;
+JdbcConnectionPool cp =3D JdbcConnectionPool.
+    create("jdbc:h2:~/test", "sa", "sa");
+Connection conn =3D cp.getConnection();
+conn.close(); cp.dispose();
+</pre>
+
+<h2><a href=3D"http://www.h2database.com/html/build.html#maven2">Maven 2</a=
+></h2>
+<pre class=3D"notranslate">&lt;dependency&gt;
+    &lt;groupId&gt;com.h2database&lt;/groupId&gt;
+    &lt;artifactId&gt;h2&lt;/artifactId&gt;
+    &lt;version&gt;2.1.214&lt;/version&gt;
+&lt;/dependency&gt;
+</pre>
+
+<h2><a href=3D"http://www.h2database.com/html/tutorial.html#using_hibernate=
+">Hibernate</a></h2>
+<p>
+hibernate.cfg.xml (or use the HSQLDialect):
+</p>
+<pre class=3D"notranslate">&lt;property name=3D"dialect"&gt;
+    org.hibernate.dialect.H2Dialect
+&lt;/property&gt;
+</pre>
+
+<h2><a href=3D"http://www.h2database.com/html/tutorial.html#using_toplink">=
+TopLink and Glassfish</a></h2>
+<p>
+Datasource class: <code class=3D"notranslate">org.h2.jdbcx.JdbcDataSource</=
+code><br>
+<code class=3D"notranslate">oracle.toplink.essentials.platform.</code><br>
+<code class=3D"notranslate">database.H2Platform</code>
+</p>
+
+</div>
+
+</div>
+
+</body></html>
+------MultipartBoundary--sKDHhc0lfvsxYshBwug2K4A6Qniu3jUqPDvKSapU7l----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: cid:css-7d239e06-f2db-4961-b3d5-cc54e13e7b21@mhtml.blink
+
+@charset "utf-8";
+
+td, input, select, textarea, body, td, th { font: 13px Arial, sans-serif; }
+
+h1, h2, h3, h4, h5 { font: bold 13px Arial, sans-serif; }
+
+h1 { background-color: rgb(0, 0, 187); padding: 2px 4px; margin-bottom: 0px=
+; color: rgb(255, 255, 255); font-size: 19px; line-height: normal; }
+
+h2 { font-size: 16px; }
+
+a.link { text-decoration: underline; color: blue; }
+
+a.link:hover { text-decoration: underline; color: blue; }
+
+a { text-decoration: none; color: black; }
+
+a:hover { text-decoration: underline; color: blue; }
+
+td, input, select, textarea, body, code, pre { font: 13px Arial, sans-serif=
+; }
+
+pre { background-color: rgb(236, 233, 216); border: 1px solid rgb(172, 168,=
+ 153); padding: 6px; border-radius: 4px; box-shadow: rgb(172, 168, 153) 2px=
+ 2px 2px; }
+
+code { background-color: rgb(236, 233, 216); padding: 0px 4px; border-radiu=
+s: 4px; }
+
+table { background-color: rgb(255, 255, 255); border-collapse: collapse; bo=
+rder: 0px solid rgb(172, 168, 153); }
+
+th { text-align: left; background-color: rgb(236, 233, 216); border: 1px so=
+lid rgb(172, 168, 153); padding: 2px; }
+
+td { background-color: rgb(255, 255, 255); text-align: left; vertical-align=
+: top; border: 0px solid rgb(172, 168, 153); padding: 2px; }
+
+ul, ol { list-style-position: outside; padding-left: 20px; }
+
+li { margin-top: 2px; }
+------MultipartBoundary--sKDHhc0lfvsxYshBwug2K4A6Qniu3jUqPDvKSapU7l------

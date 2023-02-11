@@ -1,0 +1,34 @@
+version: '3'
+services:
+  # @see https://github.com/microsoft/mssql-docker/issues/2#issuecomment-346786877
+  # @see https://stackoverflow.com/questions/69941444/how-to-have-docker-compose-init-a-sql-server-database
+  flyway:
+    container_name: 'flyway-compose-cli'
+    image: flyway/flyway:9.14.1-alpine
+    network_mode: "host"
+    #command: -url=jdbc:sqlserver://localhost:1433;databaseName=flywaydb;trustServerCertificate=true -password=Flyway123 -user=sa
+    command: info
+    environment:
+      - FLYWAY_URL=jdbc:sqlserver://localhost:1433;databaseName=flywaydb;trustServerCertificate=true
+      - FLYWAY_USER=sa
+      - FLYWAY_PASSWORD=Flyway123
+    volumes:
+      - C:\docker-volumes-data\labs\flyway\mssql-compose\data:/flyway/sql
+      - C:\docker-volumes-data\labs\flyway\mssql-compose\driver:/flyway/drivers
+    depends_on:
+      - db
+  #
+  # MSSQL server se inicializuje sam interne - diky skriptum, viz dockerfile
+  # docker/cmd spusti entrypoint.sh, kt. spustit import.sh, ktery spustit setup.sql
+  #
+  db:
+    container_name: 'flyway-compose-mssql'
+    build: 
+      context: .
+      #- dockerfile: Dockerfile-mssql
+    command: /bin/bash ./entrypoint.sh
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=Flyway123
+    ports:
+      - 1433:1433

@@ -1,5 +1,5 @@
-# flyway-maven-goal-baseline
-How to start with flyway and maven advanced goal - baseline. 
+# flyway-maven-goal-migrate
+How to start with flyway and maven advanced goal - migrate. 
 
 ## Sources
 - https://documentation.red-gate.com/fd/maven-goal-baseline-184127431.html

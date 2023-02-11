@@ -1,0 +1,15 @@
+FROM mcr.microsoft.com/mssql/server:2019-latest
+
+USER root
+
+# tipy z blogu:
+# @see https://dotnetthoughts.net/initialize-mssql-in-docker-container/
+# @see https://github.com/twright-msft/mssql-node-docker-demo-app#entrypointsh
+# oficialni tip:
+# @see https://learn.microsoft.com/en-us/sql/linux/sql-server-linux-docker-container-configure?view=sql-server-ver16&pivots=cs1-bash#customcontainer
+COPY src/mssql/setup.sql setup.sql
+COPY src/mssql/import-data.sh import-data.sh
+COPY src/mssql/entrypoint.sh entrypoint.sh
+
+RUN chmod +x entrypoint.sh
+CMD /bin/bash ./entrypoint.sh

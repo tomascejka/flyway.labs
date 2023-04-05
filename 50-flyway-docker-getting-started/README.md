@@ -1,5 +1,5 @@
 # flyway-docker-getting-started
-How to start with flyway (using h2 in memory) in docker. 
+Jak nastartovat flyway (pouziji h2 v pameti) v docker-u.
 
 ## Build
 Spusť skript ```build.bat```, který stáhne flyway oficialni docker image do tvého lokalniho docker repositáře.

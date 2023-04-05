@@ -4,12 +4,12 @@ services:
   # @see https://stackoverflow.com/questions/69941444/how-to-have-docker-compose-init-a-sql-server-database
   flyway:
     container_name: 'flyway-compose-cli'
-    image: flyway/flyway:9.14.1-alpine
+    image: tocecz/flyway-docker-mssql
     network_mode: "host"
-    #command: -url=jdbc:sqlserver://localhost:1433;databaseName=flywaydb;trustServerCertificate=true -password=Flyway123 -user=sa
+    command: -url=jdbc:sqlserver://localhost:1434;databaseName=flywaydb;trustServerCertificate=true -password=Flyway123 -user=sa
     command: info
     environment:
-      - FLYWAY_URL=jdbc:sqlserver://localhost:1433;databaseName=flywaydb;trustServerCertificate=true
+      - FLYWAY_URL=jdbc:sqlserver://localhost:1434;databaseName=flywaydb;trustServerCertificate=true
       - FLYWAY_USER=sa
       - FLYWAY_PASSWORD=Flyway123
     volumes:
@@ -29,6 +29,7 @@ services:
     command: /bin/bash ./entrypoint.sh
     environment:
       - ACCEPT_EULA=Y
-      - MSSQL_SA_PASSWORD=Flyway123
+      #- MSSQL_SA_PASSWORD=Flyway123
+      - SA_PASSWORD=Flyway123
     ports:
-      - 1433:1433
+      - 1434:1433

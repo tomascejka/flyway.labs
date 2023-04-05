@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flyway-mssql-kubernetes-gs
+  labels:
+    app: flyway-mssql-kubernetes-gs
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flyway-mssql-kubernetes-gs
+  template:
+    metadata:
+      labels:
+        app: flyway-mssql-kubernetes-gs
+    spec:
+      containers:
+      - name: sqlserver
+        #image: microsoft/mssql-server-linux:latest
+        # @see https://hub.docker.com/r/tomascejka/flyway-mssql-init-db
+        image: tocecz/flyway-mssql-kubernetes-gs-v1:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 1433
+        env:
+        - name: MSSQL_SA_PASSWORD
+          value: "Flyway123"
+        - name: ACCEPT_EULA
+          value: "Y"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flyway-mssql-kubernetes-gs-v1
+spec:
+  selector:
+    app: flyway-mssql-kubernetes-gs
+  ports:
+  - name: sqlserver
+    port: 1433
+    targetPort: 1433
+  type: LoadBalancer

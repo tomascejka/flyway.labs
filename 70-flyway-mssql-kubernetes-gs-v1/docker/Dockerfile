@@ -11,11 +11,12 @@ FROM flyway/flyway:${FLYWAY_VERSION}
 # /flyway/jars: The jars files that you want Flyway to use (for Java-based migrations)
 #VOLUME [ "/flyway/conf","/flyway/drivers", "flyway/sql", "flyway/jars" ]
 
+# @see https://flywaydb.org/documentation/usage/commandline/migrate
 #RUN ["rm", "-fr", "/flyway/conf"]
 #COPY src/flyway.conf /flyway/conf/
 
-#RUN ["rm", "-fr", "/flyway/sql"]
-#COPY src/flyway/*.sql /flyway/sql/
+RUN ["rm", "-fr", "/flyway/sql"]
+COPY src/flyway/*.sql /flyway/sql/
 
 ## Flyway Edition
 # community: Select the Flyway Community Edition (default)

@@ -7,7 +7,7 @@ SET mssqlAppName=flyway-mssql-kubernetes-gs-v1
 SET mssqlImgName=%regName%/%mssqlAppName%
 SET ymlName=job.yaml
 SET FLYWAY_VERSION=9.16-alpine
-SET MSSQL_VERSION=2019-latest
+SET MSSQL_VERSION=2022-latest
 
 echo -----------------------------------
 echo %appName%

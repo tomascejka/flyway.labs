@@ -16,5 +16,13 @@ IF [%opt%] EQU [y] (
 	cd %WORKDIR%
 )
 
+echo.
+echo ---------------------------------------------
+echo List of kubernetes objects
+echo ---------------------------------------------
 kubectl apply -f mssql.yaml
+
+REM -- @see https://ss64.com/nt/timeout.html
+TIMEOUT -T 10
+
 kubectl apply -f %ymlName%

@@ -11,7 +11,7 @@ spec:
           # @see https://www.docker.com/blog/how-kubernetes-works-under-the-hood-with-docker-desktop/
           # set the image pull policy to IfNotPresent. This ensures that the image from the local cache is going to be used.
           imagePullPolicy: IfNotPresent
-          command: ["flyway", "info"]
+          command: ["flyway", "migrate"]
           env:
           - name: FLYWAY_USER
             value: sa
@@ -27,4 +27,4 @@ spec:
       #    configMap:
       #        name: flyway-configmap
       restartPolicy: Never
-  backoffLimit: 2
+  backoffLimit: 1

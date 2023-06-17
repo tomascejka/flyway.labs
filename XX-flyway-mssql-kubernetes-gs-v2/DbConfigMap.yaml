@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flyway-configmap
+  # namespace: tc-test
+data:
+  # https://learn.microsoft.com/en-us/sql/connect/jdbc/working-with-a-connection
+  flyway.conf: |
+    flyway.url=jdbc:sqlserver://localhost:1434;databaseName=flywaydb;trustServerCertificate=true
+    flyway.username=sa
+    flyway.driver=com.microsoft.sqlserver.jdbc.SQLServerDriver

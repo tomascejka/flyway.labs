@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: flyway-job-v2
+spec:
+  template:
+    spec:
+      containers:
+        - name: flyway
+          image: tocecz/flyway-kubernetes-gs-v2
+          # @see https://www.docker.com/blog/how-kubernetes-works-under-the-hood-with-docker-desktop/
+          # set the image pull policy to IfNotPresent. This ensures that the image from the local cache is going to be used.
+          imagePullPolicy: IfNotPresent
+          command: ["flyway", "info"]
+          env:
+          - name: FLYWAY_USER
+            value: sa
+          - name: FLYWAY_PASSWORD
+            value: "Flyway123"
+          - name: FLYWAY_URL
+            value: "jdbc:sqlserver://flyway-mssql-kubernetes-gs-v2:1433;databaseName=flywaydb;trustServerCertificate=true"            
+          #volumeMounts:
+          #  - name: flyway-config-volume
+          #    mountPath: /flyway/conf
+      #volumes:
+      #  - name: flyway-config-volume
+      #    configMap:
+      #        name: flyway-configmap
+      restartPolicy: Never
+  backoffLimit: 2

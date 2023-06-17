@@ -1,0 +1,39 @@
+#
+# JOB, ktery svou praci nedokonci, protoze je SCHVALNE vlozen nevalidni sql skript
+#   - konkretne je spatne definovany datovy sloupce, hledej XXX
+#   - metadata.name=flyway-job-check-status je stejny (pro oba pripady)
+#     + protoze ve skriptech se k nim chovam stejne (startuji vzdy jeden, mazu vzdy stejny job.yaml)
+#
+# RESULT:
+#   - kubectl get pods, STATUS=Running (negative scenario)
+#
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: flyway-job-check-status
+spec:
+  template:
+    spec:
+      containers:
+        - name: flyway
+          image: tocecz/flyway-kubernetes-fail-koscript
+          # @see https://www.docker.com/blog/how-kubernetes-works-under-the-hood-with-docker-desktop/
+          # set the image pull policy to IfNotPresent. This ensures that the image from the local cache is going to be used.
+          imagePullPolicy: IfNotPresent
+          command: ["flyway", "migrate"]
+          env:
+          - name: FLYWAY_USER
+            value: sa
+          - name: FLYWAY_PASSWORD
+            value: "Flyway123"
+          - name: FLYWAY_URL
+            value: "jdbc:sqlserver://flyway-kubernetes-fail-mssql:1433;databaseName=flywaydb;trustServerCertificate=true"            
+          #volumeMounts:
+          #  - name: flyway-config-volume
+          #    mountPath: /flyway/conf
+      #volumes:
+      #  - name: flyway-config-volume
+      #    configMap:
+      #        name: flyway-configmap
+      restartPolicy: Never
+  backoffLimit: 1

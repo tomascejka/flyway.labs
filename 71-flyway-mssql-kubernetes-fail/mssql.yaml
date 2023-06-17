@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flyway-kubernetes-fail-mssql
+  labels:
+    app: flyway-kubernetes-fail-mssql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flyway-kubernetes-fail-mssql
+  template:
+    metadata:
+      labels:
+        app: flyway-kubernetes-fail-mssql
+    spec:
+      containers:
+      - name: sqlserver
+        #image: microsoft/mssql-server-linux:latest
+        # @see https://hub.docker.com/r/tomascejka/flyway-mssql-init-db
+        image: tocecz/flyway-kubernetes-fail-mssql:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 1433
+        env:
+        - name: MSSQL_SA_PASSWORD
+          value: "Flyway123"
+        - name: ACCEPT_EULA
+          value: "Y"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flyway-kubernetes-fail-mssql
+spec:
+  selector:
+    app: flyway-kubernetes-fail-mssql
+  ports:
+  - name: sqlserver
+    port: 1433
+    targetPort: 1433
+  type: LoadBalancer

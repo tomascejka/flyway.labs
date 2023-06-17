@@ -1,0 +1,5 @@
+*.bat
+*.md
+*.ps1
+**/_temp
+**/www

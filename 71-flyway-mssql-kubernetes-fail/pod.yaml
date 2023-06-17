@@ -1,0 +1,54 @@
+#
+# Tohle predstavuje nasi aplikaci, sice jenom busybox s echo prikazem,
+# ale ma initContainer, kt. proveruje flyway via 'kubectl wait'
+#
+# Pozn. 'kubectl wait' odladeny a je funkcni na oba scenare ok/fail, kdezto
+# puvodni 'kubectl get job check-status -o jsonpath="{.status.succeeded}"' nefunguje ve fail scenari.
+#
+apiVersion: v1
+kind: Pod
+metadata:
+  name: echo-command
+spec:
+  containers:
+  - name: my-pod
+    image: busybox:1.28
+    command: ['sh', '-c', 'echo The app is running! && sleep 3600']  
+  initContainers:
+  - name: init-pod
+    image: bitnami/kubectl:1.26.4
+    #command: ['sh', '-c', 'until kubectl get job check-status -o jsonpath="{.status.succeeded}"; do echo waiting for my-job; sleep 5; done;']
+    command: ['sh', '-c', 'until kubectl wait --for=condition=complete job/flyway-job-check-status --timeout=15s; do echo waiting for my-job; sleep 3; done;']
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: api-role
+  namespace: default
+  labels:
+    app: role-for-init
+rules:
+  # Error from server (Forbidden): jobs.batch "test-job-check-status" is forbidden:
+  # User "system:serviceaccount:default:default" cannot get
+  # resource "jobs" in API group "batch" in the namespace "default"
+  # @see https://kubernetes.io/docs/reference/access-authn-authz/rbac/
+- apiGroups: ["batch"]
+  resources: ["jobs"]
+  verbs: ["get", "list", "watch"]
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: global-rolebinding
+  namespace: default
+  labels:
+    app: role-for-init
+subjects:
+- kind: Group
+  name: system:serviceaccounts:default
+  apiGroup: rbac.authorization.k8s.io
+  namespace: default
+roleRef:
+  kind: Role
+  name: api-role
+  apiGroup: rbac.authorization.k8s.io

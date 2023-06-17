@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: agent
+spec:
+  containers:
+  - name: my-agent
+    image: alpine/k8s:1.27.1
+    command: ['sh', '-c', '--']
+    args: [ "while true; do sleep 30; done;" ]

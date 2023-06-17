@@ -1,0 +1,31 @@
+# https://github.com/sdaschner/zero-downtime-kubernetes/blob/db-migrations/deployment/coffee-shop/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echo-command-initcontainer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: echo-command-initcontainer
+  template:
+    metadata:
+      labels:
+        app: echo-command-initcontainer
+    spec:
+      containers:
+      - name: my-pod
+        image: busybox:1.28
+        command: ['sh', '-c', 'echo The app is running! && sleep 3600']  
+      initContainers:
+      - name: schema-migration
+        image: tocecz/flyway-kubernetes-initcontainer
+        imagePullPolicy: IfNotPresent
+        command: ["flyway", "info"]
+        env:
+        - name: FLYWAY_USER
+          value: sa
+        - name: FLYWAY_PASSWORD
+          value: "Flyway123"
+        - name: FLYWAY_URL
+          value: "jdbc:sqlserver://flyway-mssql-kubernetes-initcontainer:1433;databaseName=flywaydb;trustServerCertificate=true"

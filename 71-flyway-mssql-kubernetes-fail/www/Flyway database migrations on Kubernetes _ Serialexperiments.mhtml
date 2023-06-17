@@ -1,0 +1,816 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://blog.serialexperiments.co.uk/posts/kubernetes-flyway-job/
+Subject: Flyway database migrations on Kubernetes | Serialexperiments
+Date: Sat, 11 Feb 2023 19:12:51 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--zT39g1aStESZ0ID1lf1C93JSzzQ68wapX8vLLKhSsW----"
+
+
+------MultipartBoundary--zT39g1aStESZ0ID1lf1C93JSzzQ68wapX8vLLKhSsW----
+Content-Type: text/html
+Content-ID: <frame-E8D9060EC823716398C1E0D1FE69F4E3@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://blog.serialexperiments.co.uk/posts/kubernetes-flyway-job/
+
+<!DOCTYPE html><html lang=3D"en" dir=3D"auto"><head><meta http-equiv=3D"Con=
+tent-Type" content=3D"text/html; charset=3DUTF-8"><meta http-equiv=3D"x-ua-=
+compatible" content=3D"IE=3Dedge"><meta name=3D"viewport" content=3D"width=
+=3Ddevice-width,initial-scale=3D1,shrink-to-fit=3Dno"><meta name=3D"robots"=
+ content=3D"index, follow"><title>Flyway database migrations on Kubernetes =
+| Serialexperiments</title><meta name=3D"keywords" content=3D"kubernetes,da=
+tabase"><meta name=3D"description" content=3D"Running flyway database migra=
+tions in kubernetes"><meta name=3D"author" content=3D"Stephen Bennett"><lin=
+k rel=3D"canonical" href=3D"https://blog.serialexperiments.co.uk/posts/kube=
+rnetes-flyway-job/"><link href=3D"https://blog.serialexperiments.co.uk/asse=
+ts/css/stylesheet.min.94a69f3d0b70cac76c6d6f7dfecc9f91f2319ec73d54be960b0d3=
+624fa5a25e2.css" rel=3D"preload stylesheet" as=3D"style"><link rel=3D"icon"=
+ href=3D"https://blog.serialexperiments.co.uk/favicon.ico"><link rel=3D"ico=
+n" type=3D"image/png" sizes=3D"16x16" href=3D"https://blog.serialexperiment=
+s.co.uk/favicon-16x16.png"><link rel=3D"icon" type=3D"image/png" sizes=3D"3=
+2x32" href=3D"https://blog.serialexperiments.co.uk/favicon-32x32.png"><link=
+ rel=3D"apple-touch-icon" href=3D"https://blog.serialexperiments.co.uk/appl=
+e-touch-icon.png"><link rel=3D"mask-icon" href=3D"https://blog.serialexperi=
+ments.co.uk/safari-pinned-tab.svg"><meta name=3D"theme-color" content=3D"#2=
+e2e33"><meta name=3D"msapplication-TileColor" content=3D"#2e2e33"><meta nam=
+e=3D"generator" content=3D"Hugo 0.79.0"><meta property=3D"og:title" content=
+=3D"Flyway database migrations on Kubernetes"><meta property=3D"og:descript=
+ion" content=3D"Running flyway database migrations in kubernetes"><meta pro=
+perty=3D"og:type" content=3D"article"><meta property=3D"og:url" content=3D"=
+https://blog.serialexperiments.co.uk/posts/kubernetes-flyway-job/"><meta pr=
+operty=3D"article:published_time" content=3D"2021-01-19T00:00:00+00:00"><me=
+ta property=3D"article:modified_time" content=3D"2021-04-13T21:22:58+01:00"=
+><meta property=3D"og:site_name" content=3D"Serialexperiments"><meta name=
+=3D"twitter:card" content=3D"summary"><meta name=3D"twitter:title" content=
+=3D"Flyway database migrations on Kubernetes"><meta name=3D"twitter:descrip=
+tion" content=3D"Running flyway database migrations in kubernetes"></head><=
+body class=3D"dark"><header class=3D"header"><nav class=3D"nav"><div class=
+=3D"logo"><a href=3D"https://blog.serialexperiments.co.uk/" accesskey=3D"h"=
+>SerialExperiments</a>
+<span class=3D"logo-switches"><span class=3D"theme-toggle"><a id=3D"theme-t=
+oggle" accesskey=3D"t"><svg id=3D"moon" xmlns=3D"http://www.w3.org/2000/svg=
+" width=3D"24" height=3D"24" viewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"=
+currentcolor" stroke-width=3D"2" stroke-linecap=3D"round" stroke-linejoin=
+=3D"round"><path d=3D"M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path><=
+/svg><svg id=3D"sun" xmlns=3D"http://www.w3.org/2000/svg" width=3D"24" heig=
+ht=3D"24" viewBox=3D"0 0 24 24" fill=3D"none" stroke=3D"currentcolor" strok=
+e-width=3D"2" stroke-linecap=3D"round" stroke-linejoin=3D"round"><circle cx=
+=3D"12" cy=3D"12" r=3D"5"></circle><line x1=3D"12" y1=3D"1" x2=3D"12" y2=3D=
+"3"></line><line x1=3D"12" y1=3D"21" x2=3D"12" y2=3D"23"></line><line x1=3D=
+"4.22" y1=3D"4.22" x2=3D"5.64" y2=3D"5.64"></line><line x1=3D"18.36" y1=3D"=
+18.36" x2=3D"19.78" y2=3D"19.78"></line><line x1=3D"1" y1=3D"12" x2=3D"3" y=
+2=3D"12"></line><line x1=3D"21" y1=3D"12" x2=3D"23" y2=3D"12"></line><line =
+x1=3D"4.22" y1=3D"19.78" x2=3D"5.64" y2=3D"18.36"></line><line x1=3D"18.36"=
+ y1=3D"5.64" x2=3D"19.78" y2=3D"4.22"></line></svg></a></span></span></div>=
+<ul class=3D"menu" id=3D"menu"><li><a href=3D"https://blog.serialexperiment=
+s.co.uk/search" title=3D"Search"><span>Search</span></a></li><li><a href=3D=
+"https://blog.serialexperiments.co.uk/tags" title=3D"Tags"><span>Tags</span=
+></a></li><li><a href=3D"https://blog.serialexperiments.co.uk/archive" titl=
+e=3D"Archive"><span>Archive</span></a></li></ul></nav></header><main class=
+=3D"main"><article class=3D"post-single"><header class=3D"post-header"><h1 =
+class=3D"post-title">Flyway database migrations on Kubernetes</h1><div clas=
+s=3D"post-meta">January 19, 2021&nbsp;=C2=B7&nbsp;2 min&nbsp;=C2=B7&nbsp;St=
+ephen Bennett</div></header><div class=3D"post-content"><p>Managing <code>d=
+atabase</code> migrations via code is good! back in <code>DBA</code> days i=
+ used <code>SSDT</code> and <code>RedGate</code> tools to do my SQL Server =
+deployments. In my current shop we normally use <code>postgres</code> so I =
+needed to find a new tool. Searching around i found <code>flyway</code> whi=
+ch also happens to have owned by <code>RedGate</code> and this lets you do =
+<code>migration</code> deployments to <code>postgres</code>, <code>sql serv=
+er</code>, <code>mysql</code> and a host of others im sure.</p><p>To run it=
+ locally is super easy, download the client create your conf file with the =
+database you want to deploy to and write your <code>.sql</code> files. But =
+when you have a more locked down production environment that you need to co=
+py the <code>.sql</code> files into, get the tool on a box and be allow pat=
+ching and all the rest of it, we ran into problems. My solution (though som=
+e may say not very elegant) is the create a <code>docker</code> image from =
+the flyway base image load in the sql files as part of a <code>CI/CD</code>=
+ and push it to <code>kubernetes</code> Then i just needed to run it. Which=
+ is a perfect example of a <code>job</code> and pass it the conf (Hello <co=
+de>configmap</code>).</p><p>Code for the solution is below</p><h2 id=3D"doc=
+kerfile">Dockerfile</h2><div class=3D"highlight"><pre style=3D"color:#f8f8f=
+2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code =
+class=3D"language-docker" data-lang=3D"docker"><span style=3D"color:#66d9ef=
+">FROM</span><span style=3D"color:#e6db74"> flyway/flyway:7.3.2</span><span=
+ style=3D"color:#960050;background-color:#1e0010">
+</span><span style=3D"color:#960050;background-color:#1e0010">
+</span><span style=3D"color:#960050;background-color:#1e0010"></span><span =
+style=3D"color:#66d9ef">RUN</span> <span style=3D"color:#f92672">[</span><s=
+pan style=3D"color:#e6db74">"rm"</span>, <span style=3D"color:#e6db74">"-fr=
+"</span>, <span style=3D"color:#e6db74">"/flyway/sql"</span><span style=3D"=
+color:#f92672">]</span><span style=3D"color:#960050;background-color:#1e001=
+0">
+</span><span style=3D"color:#960050;background-color:#1e0010"></span><span =
+style=3D"color:#66d9ef">COPY</span> sql/ /flyway/sql/<span style=3D"color:#=
+960050;background-color:#1e0010">
+</span><span style=3D"color:#960050;background-color:#1e0010">
+</span><span style=3D"color:#960050;background-color:#1e0010"></span><span =
+style=3D"color:#66d9ef">ENTRYPOINT</span> [<span style=3D"color:#e6db74">"f=
+lyway"</span>, <span style=3D"color:#e6db74">"migrate"</span>, <span style=
+=3D"color:#e6db74">"-url=3Djdbc:postgresql://localhost:5432/customerdb"</sp=
+an>, <span style=3D"color:#e6db74">"-user=3Dpostgres"</span>, <span style=
+=3D"color:#e6db74">"-password=3Dpostgres"</span>]<span style=3D"color:#9600=
+50;background-color:#1e0010">
+</span></code></pre></div><h2 id=3D"kubernetes-manifests">Kubernetes Manife=
+sts</h2><p>I used a configmap to create my <code>flyway.conf</code> file. Y=
+ou can do it as a <code>secret</code> or I believe in pass in values as <co=
+de>environment variables</code></p><p>ConfigMap</p><div class=3D"highlight"=
+><pre style=3D"color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-ta=
+b-size:4;tab-size:4"><code class=3D"language-yml hljs yaml" data-lang=3D"ym=
+l"><span style=3D"color:#f92672"><span class=3D"hljs-attr">apiVersion</span=
+></span><span class=3D"hljs-attr">:</span> <span style=3D"color:#ae81ff"><s=
+pan class=3D"hljs-string">v1</span></span>
+<span style=3D"color:#f92672"><span class=3D"hljs-attr">kind</span></span><=
+span class=3D"hljs-attr">:</span> <span style=3D"color:#ae81ff"><span class=
+=3D"hljs-string">ConfigMap</span></span>
+<span style=3D"color:#f92672"><span class=3D"hljs-attr">metadata</span></sp=
+an><span class=3D"hljs-attr">:</span>
+  <span style=3D"color:#f92672"><span class=3D"hljs-attr">name</span></span=
+><span class=3D"hljs-attr">:</span> <span style=3D"color:#ae81ff"><span cla=
+ss=3D"hljs-string">flyway-configmap</span></span>
+<span style=3D"color:#f92672"><span class=3D"hljs-attr">data</span></span><=
+span class=3D"hljs-attr">:</span>
+  <span style=3D"color:#f92672"><span class=3D"hljs-attr">flyway.conf</span=
+></span><span class=3D"hljs-attr">:</span> <span class=3D"hljs-string">|</s=
+pan><span style=3D"color:#e6db74"><span class=3D"hljs-string">
+</span></span><span style=3D"color:#e6db74"><span class=3D"hljs-string">   =
+ flyway.url=3Djdbc:postgresql://&lt;RDS-INSTANCE&gt;:5432/&lt;database&gt;
+</span></span><span style=3D"color:#e6db74"><span class=3D"hljs-string">   =
+ flyway.user=3D&lt;FLYWAY-ACCOUNT&gt;
+</span></span><span style=3D"color:#e6db74"><span class=3D"hljs-string">   =
+ flyway.password=3D&lt;PASSWORD-FOR-ACCOUNT&gt;</span></span><span class=3D=
+"hljs-string">   =20
+</span></code></pre></div><p>Then you just need a job to call the image and=
+ run it</p><div class=3D"highlight"><pre style=3D"color:#f8f8f2;background-=
+color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class=3D"lang=
+uage-yml hljs yaml" data-lang=3D"yml"><span style=3D"color:#f92672"><span c=
+lass=3D"hljs-attr">apiVersion</span></span><span class=3D"hljs-attr">:</spa=
+n> <span style=3D"color:#ae81ff"><span class=3D"hljs-string">batch/v1</span=
+></span>
+<span style=3D"color:#f92672"><span class=3D"hljs-attr">kind</span></span><=
+span class=3D"hljs-attr">:</span> <span style=3D"color:#ae81ff"><span class=
+=3D"hljs-string">Job</span></span>
+<span style=3D"color:#f92672"><span class=3D"hljs-attr">metadata</span></sp=
+an><span class=3D"hljs-attr">:</span>
+  <span style=3D"color:#f92672"><span class=3D"hljs-attr">name</span></span=
+><span class=3D"hljs-attr">:</span> <span style=3D"color:#ae81ff"><span cla=
+ss=3D"hljs-string">flyway</span></span>
+<span style=3D"color:#f92672"><span class=3D"hljs-attr">spec</span></span><=
+span class=3D"hljs-attr">:</span>
+  <span style=3D"color:#f92672"><span class=3D"hljs-attr">template</span></=
+span><span class=3D"hljs-attr">:</span>
+    <span style=3D"color:#f92672"><span class=3D"hljs-attr">metadata</span>=
+</span><span class=3D"hljs-attr">:</span>=20
+      <span style=3D"color:#f92672"><span class=3D"hljs-attr">name</span></=
+span><span class=3D"hljs-attr">:</span> <span style=3D"color:#ae81ff"><span=
+ class=3D"hljs-string">flyway</span></span>
+    <span style=3D"color:#f92672"><span class=3D"hljs-attr">spec</span></sp=
+an><span class=3D"hljs-attr">:</span>
+      <span style=3D"color:#f92672"><span class=3D"hljs-attr">containers</s=
+pan></span><span class=3D"hljs-attr">:</span>
+        <span class=3D"hljs-bullet">-</span> <span style=3D"color:#f92672">=
+<span class=3D"hljs-attr">name</span></span><span class=3D"hljs-attr">:</sp=
+an> <span style=3D"color:#ae81ff"><span class=3D"hljs-string">flyway</span>=
+</span>
+          <span style=3D"color:#f92672"><span class=3D"hljs-attr">image</sp=
+an></span><span class=3D"hljs-attr">:</span> <span style=3D"color:#ae81ff">=
+<span class=3D"hljs-string">ECR_URL:&lt;TAG&gt;</span></span>
+          <span style=3D"color:#f92672"><span class=3D"hljs-attr">command</=
+span></span><span class=3D"hljs-attr">:</span> [<span style=3D"color:#e6db7=
+4"><span class=3D"hljs-string">"flyway"</span></span>, <span style=3D"color=
+:#e6db74"><span class=3D"hljs-string">"migrate"</span></span>]
+          <span style=3D"color:#f92672"><span class=3D"hljs-attr">volumeMou=
+nts</span></span><span class=3D"hljs-attr">:</span>
+            <span class=3D"hljs-bullet">-</span> <span style=3D"color:#f926=
+72"><span class=3D"hljs-attr">name</span></span><span class=3D"hljs-attr">:=
+</span> <span style=3D"color:#ae81ff"><span class=3D"hljs-string">flyway-co=
+nfig-volume</span></span>
+              <span style=3D"color:#f92672"><span class=3D"hljs-attr">mount=
+Path</span></span><span class=3D"hljs-attr">:</span> <span style=3D"color:#=
+ae81ff"><span class=3D"hljs-string">/flyway/conf</span></span>
+      <span style=3D"color:#f92672"><span class=3D"hljs-attr">volumes</span=
+></span><span class=3D"hljs-attr">:</span>
+        <span class=3D"hljs-bullet">-</span> <span style=3D"color:#f92672">=
+<span class=3D"hljs-attr">name</span></span><span class=3D"hljs-attr">:</sp=
+an> <span style=3D"color:#ae81ff"><span class=3D"hljs-string">flyway-config=
+-volume</span></span>
+          <span style=3D"color:#f92672"><span class=3D"hljs-attr">configMap=
+</span></span><span class=3D"hljs-attr">:</span>
+              <span style=3D"color:#f92672"><span class=3D"hljs-attr">name<=
+/span></span><span class=3D"hljs-attr">:</span> <span style=3D"color:#ae81f=
+f"><span class=3D"hljs-string">flyway-configmap</span></span>
+      <span style=3D"color:#f92672"><span class=3D"hljs-attr">restartPolicy=
+</span></span><span class=3D"hljs-attr">:</span> <span style=3D"color:#ae81=
+ff"><span class=3D"hljs-string">Never</span></span>
+</code></pre></div><p>With it now being in <code>kubernetes</code> you can =
+use <code>kustomize</code> to allow easy deployments to different environme=
+nts and image upgrades.</p><p>Hope this helps!</p></div><footer class=3D"po=
+st-footer"><ul class=3D"post-tags"><li><a href=3D"https://blog.serialexperi=
+ments.co.uk/tags/kubernetes/">kubernetes</a></li><li><a href=3D"https://blo=
+g.serialexperiments.co.uk/tags/database/">database</a></li></ul><div class=
+=3D"share-buttons"><a target=3D"_blank" rel=3D"noopener noreferrer" aria-la=
+bel=3D"share Flyway database migrations on Kubernetes on twitter" href=3D"h=
+ttps://twitter.com/intent/tweet/?text=3DFlyway%20database%20migrations%20on=
+%20Kubernetes&amp;url=3Dhttps%3a%2f%2fblog.serialexperiments.co.uk%2fposts%=
+2fkubernetes-flyway-job%2f&amp;hashtags=3Dkubernetes%2cdatabase"><svg viewB=
+ox=3D"0 0 512 512"><path d=3D"M449.446.0C483.971.0 512 28.03 512 62.554v386=
+.892C512 483.97 483.97 512 449.446 512h-386.892c-34.524.0-62.554-28.03-62.5=
+54-62.554v-386.892c0-34.524 28.029-62.554 62.554-62.554h386.892zm-253.927 4=
+24.544c135.939.0 210.268-112.643 210.268-210.268.0-3.218.0-6.437-.153-9.502=
+ 14.406-10.421 26.973-23.448 36.935-38.314-13.18 5.824-27.433 9.809-42.452 =
+11.648 15.326-9.196 26.973-23.602 32.49-40.92-14.252 8.429-30.038 14.56-46.=
+896 17.931-13.487-14.406-32.644-23.295-53.946-23.295-40.767.0-73.87 33.104-=
+73.87 73.87.0 5.824.613 11.494 1.992 16.858-61.456-3.065-115.862-32.49-152.=
+337-77.241-6.284 10.881-9.962 23.601-9.962 37.088.0 25.594 13.027 48.276 32=
+.95 61.456-12.107-.307-23.448-3.678-33.41-9.196v.92c0 35.862 25.441 65.594 =
+59.311 72.49-6.13 1.686-12.72 2.606-19.464 2.606-4.751.0-9.348-.46-13.946-1=
+.38 9.349 29.426 36.628 50.728 68.965 51.341-25.287 19.771-57.164 31.571-91=
+.8 31.571-5.977.0-11.801-.306-17.625-1.073 32.337 21.15 71.264 33.41 112.95=
+ 33.41z"></path></svg></a><a target=3D"_blank" rel=3D"noopener noreferrer" =
+aria-label=3D"share Flyway database migrations on Kubernetes on linkedin" h=
+ref=3D"https://www.linkedin.com/shareArticle?mini=3Dtrue&amp;url=3Dhttps%3a=
+%2f%2fblog.serialexperiments.co.uk%2fposts%2fkubernetes-flyway-job%2f&amp;t=
+itle=3DFlyway%20database%20migrations%20on%20Kubernetes&amp;summary=3DFlywa=
+y%20database%20migrations%20on%20Kubernetes&amp;source=3Dhttps%3a%2f%2fblog=
+.serialexperiments.co.uk%2fposts%2fkubernetes-flyway-job%2f"><svg viewBox=
+=3D"0 0 512 512"><path d=3D"M449.446.0C483.971.0 512 28.03 512 62.554v386.8=
+92C512 483.97 483.97 512 449.446 512h-386.892c-34.524.0-62.554-28.03-62.554=
+-62.554v-386.892c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.=
+278V197.561h-75.04v225.717h75.04zm270.539.0v-129.439c0-69.333-37.018-101.58=
+6-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 =
+21.181.0 225.717.0 225.717h75.02v-126.056c0-6.748.486-13.492 2.474-18.315 5=
+.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.03=
+7v120.768h75.024zm-307.552-334.556c-25.674.0-42.448 16.879-42.448 39.002.0 =
+21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.00=
+2-.485-22.092-16.241-38.954-41.943-39.002z"></path></svg></a><a target=3D"_=
+blank" rel=3D"noopener noreferrer" aria-label=3D"share Flyway database migr=
+ations on Kubernetes on reddit" href=3D"https://reddit.com/submit?url=3Dhtt=
+ps%3a%2f%2fblog.serialexperiments.co.uk%2fposts%2fkubernetes-flyway-job%2f&=
+amp;title=3DFlyway%20database%20migrations%20on%20Kubernetes"><svg viewBox=
+=3D"0 0 512 512"><path d=3D"M449.446.0C483.971.0 512 28.03 512 62.554v386.8=
+92C512 483.97 483.97 512 449.446 512h-386.892c-34.524.0-62.554-28.03-62.554=
+-62.554v-386.892c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c=
+0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.42=
+4-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.7=
+34 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-1=
+3.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.6=
+9c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-2=
+1.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-=
+11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31=
+.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 1=
+66.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493=
+ 14.564-6.47 24.735-21.034 24.735-38.001zm-119.474 108.193c-20.27 20.241-59=
+.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.=
+007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.=
+317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.99=
+5 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29=
+.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.=
+706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zm-160.386-29.=
+702c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.=
+0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"><=
+/path></svg></a><a target=3D"_blank" rel=3D"noopener noreferrer" aria-label=
+=3D"share Flyway database migrations on Kubernetes on facebook" href=3D"htt=
+ps://facebook.com/sharer/sharer.php?u=3Dhttps%3a%2f%2fblog.serialexperiment=
+s.co.uk%2fposts%2fkubernetes-flyway-job%2f"><svg viewBox=3D"0 0 512 512"><p=
+ath d=3D"M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.9=
+7 512 449.446 512H342.978v-192.915h66.6l12.672-82.621h-79.272v-53.617c0-22.=
+603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.2=
+88.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104=
+c-34.524.0-62.554-28.03-62.554-62.554v-386.892c0-34.524 28.029-62.554 62.55=
+4-62.554h386.892z"></path></svg></a><a target=3D"_blank" rel=3D"noopener no=
+referrer" aria-label=3D"share Flyway database migrations on Kubernetes on w=
+hatsapp" href=3D"https://api.whatsapp.com/send?text=3DFlyway%20database%20m=
+igrations%20on%20Kubernetes%20-%20https%3a%2f%2fblog.serialexperiments.co.u=
+k%2fposts%2fkubernetes-flyway-job%2f"><svg viewBox=3D"0 0 512 512"><path d=
+=3D"M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512=
+ 449.446 512h-386.892c-34.524.0-62.554-28.03-62.554-62.554v-386.892c0-34.52=
+4 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.84=
+7-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 =
+8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659=
+ 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.8=
+95-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193=
+-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-=
+23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971=
+ 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 =
+105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.2=
+42-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4=
+.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2=
+.241-18.91-6.97-36.017-22.23-13.314-11.876-22.304-26.542-24.916-31.026s-.27=
+9-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.48=
+4 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.=
+809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.=
+158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364=
+.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627=
+ 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.7=
+75 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-=
+21.298-1.119-1.869-4.105-2.99-8.583-5.232z"></path></svg></a><a target=3D"_=
+blank" rel=3D"noopener noreferrer" aria-label=3D"share Flyway database migr=
+ations on Kubernetes on telegram" href=3D"https://telegram.me/share/url?tex=
+t=3DFlyway%20database%20migrations%20on%20Kubernetes&amp;url=3Dhttps%3a%2f%=
+2fblog.serialexperiments.co.uk%2fposts%2fkubernetes-flyway-job%2f"><svg vie=
+wBox=3D"2 2 28 28"><path d=3D"M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3=
+.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0=
+129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47A3.38 3.38.0 0126.49 =
+29.86zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0=
+ 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.=
+61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 2=
+3.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 =
+.06s-2.51 2.3-7.52 6.8z"></path></svg></a></div></footer></article></main><=
+footer class=3D"footer"><span>=C2=A9 2021 <a href=3D"https://blog.serialexp=
+eriments.co.uk/">Serialexperiments</a></span>
+<span>=C2=B7</span>
+<span>Powered by <a href=3D"https://gohugo.io/" rel=3D"noopener noreferrer"=
+ target=3D"_blank">Hugo</a></span>
+<span>=C2=B7</span>
+<span>Theme <a href=3D"https://git.io/hugopapermod" rel=3D"noopener" target=
+=3D"_blank">PaperMod</a></span></footer><button class=3D"top-link" id=3D"to=
+p-link" type=3D"button" aria-label=3D"go to top" title=3D"Go to Top" access=
+key=3D"g" style=3D"visibility: visible; opacity: 1;"><svg xmlns=3D"http://w=
+ww.w3.org/2000/svg" viewBox=3D"0 0 12 6"><path d=3D"M12 6H0l6-6z"></path></=
+svg></button>
+</body></html>
+------MultipartBoundary--zT39g1aStESZ0ID1lf1C93JSzzQ68wapX8vLLKhSsW----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://blog.serialexperiments.co.uk/assets/css/stylesheet.min.94a69f3d0b70cac76c6d6f7dfecc9f91f2319ec73d54be960b0d3624fa5a25e2.css
+
+@charset "utf-8";
+
+.not-found { position: absolute; left: 0px; right: 0px; display: flex; alig=
+n-items: center; justify-content: center; height: 80%; font-size: 160px; fo=
+nt-weight: 700; }
+
+.hljs-comment, .hljs-quote { color: rgb(182, 177, 139); }
+
+.hljs-deletion, .hljs-name, .hljs-regexp, .hljs-selector-class, .hljs-selec=
+tor-id, .hljs-tag, .hljs-template-variable, .hljs-variable { color: rgb(235=
+, 60, 84); }
+
+.hljs-built_in, .hljs-builtin-name, .hljs-link, .hljs-literal, .hljs-meta, =
+.hljs-number, .hljs-params, .hljs-type { color: rgb(231, 206, 86); }
+
+.hljs-attribute { color: rgb(238, 124, 43); }
+
+.hljs-addition, .hljs-bullet, .hljs-string, .hljs-symbol { color: rgb(79, 1=
+80, 215); }
+
+.hljs-section, .hljs-title { color: rgb(120, 187, 101); }
+
+.hljs-keyword, .hljs-selector-tag { color: rgb(180, 94, 164); }
+
+.hljs { display: block; overflow-x: auto; background: rgb(28, 29, 33); colo=
+r: rgb(192, 197, 206); padding: 0.5em; }
+
+.hljs-emphasis { font-style: italic; }
+
+.hljs-strong { font-weight: 700; }
+
+.archive-posts { width: 100%; font-size: 16px; }
+
+.archive-year { margin-top: 40px; }
+
+.archive-year:not(:last-of-type) { border-bottom: 2px solid var(--border); =
+}
+
+.archive-month { display: flex; align-items: flex-start; padding: 10px 0px;=
+ }
+
+.archive-month-header { margin: 25px 0px; width: 200px; }
+
+.archive-month:not(:last-of-type) { border-bottom: 1px solid var(--border);=
+ }
+
+.archive-entry { position: relative; padding: 5px; margin: 10px 0px; }
+
+.archive-entry-title { margin: 5px 0px; font-weight: 400; }
+
+.archive-count, .archive-meta { color: var(--secondary); font-size: 14px; }
+
+@media (max-width: 800px) {
+  .archive-month { flex-direction: column; }
+  .archive-year { margin-top: 20px; }
+}
+
+.footer, .top-link { font-size: 12px; color: var(--secondary); }
+
+.footer { max-width: calc(var(--main-width) + var(--gap) * 2); margin: auto=
+; padding: calc((var(--footer-height) - (var(--gap)) - 10px)/2) var(--gap);=
+ text-align: center; line-height: 24px; }
+
+.footer span { margin-inline: 1px; }
+
+.footer a { color: inherit; border-bottom: 1px solid var(--secondary); }
+
+.footer a:hover { border-bottom: 1px solid var(--primary); }
+
+.top-link { visibility: hidden; opacity: 0; position: fixed; bottom: 60px; =
+right: 30px; z-index: 99; background: var(--tertiary); width: 42px; height:=
+ 42px; padding: 12px; border-radius: 64px; fill: currentcolor; fill-opacity=
+: 0.8; transition: visibility 0.5s ease 0s, opacity 0.8s linear 0s; }
+
+.footer a:hover, .top-link:hover { color: var(--primary); }
+
+.top-link:focus { outline: 0px; }
+
+@media screen and (max-width: 800px) {
+  .list .top-link { transform: translateY(-5rem); }
+}
+
+.nav { display: flex; flex-wrap: wrap; justify-content: space-between; max-=
+width: calc(var(--nav-width) + var(--gap) * 2); margin-inline: auto; line-h=
+eight: var(--header-height); }
+
+.nav a { display: block; }
+
+.logo, .menu { display: flex; margin: auto var(--gap); }
+
+.logo { flex-wrap: inherit; }
+
+.logo a { font-size: 24px; font-weight: 700; margin-inline-end: 10px; }
+
+.logo a img { display: inline; vertical-align: middle; pointer-events: none=
+; transform: translate(0px, -10%); border-radius: 6px; margin-inline-end: 8=
+px; }
+
+.theme-toggle svg { height: 18px; user-select: none; cursor: pointer; }
+
+body.dark #moon { vertical-align: middle; display: none; }
+
+body:not(.dark) #sun { display: none; }
+
+.menu { list-style: none; word-break: keep-all; overflow-x: auto; white-spa=
+ce: nowrap; }
+
+.menu li + li { margin-inline-start: var(--gap); }
+
+.menu a { font-size: 16px; }
+
+.menu .active { font-weight: 500; border-bottom: 2px solid currentcolor; }
+
+.lang-switch li, .lang-switch ul, .logo-switches { display: inline-flex; }
+
+.lang-switch a { font-size: 16px; font-weight: 500; margin: 0px 8px; }
+
+.logo-switches { flex-wrap: inherit; }
+
+.main { position: relative; min-height: calc(100vh - var(--header-height) -=
+ var(--footer-height)); max-width: calc(var(--main-width) + var(--gap) * 2)=
+; margin: auto; padding: var(--gap); }
+
+.page-header { margin-bottom: 24px; }
+
+.page-header h1 { font-size: 40px; }
+
+.pagination { display: flex; }
+
+.pagination a { color: var(--theme); font-size: 13px; line-height: 36px; ba=
+ckground: var(--primary); border-radius: calc(18px); padding: 0px 16px; }
+
+.pagination .next { margin-inline-start: auto; }
+
+.social-icons { padding: 12px 0px; }
+
+.social-icons a:not(:last-of-type) { margin-inline-end: 12px; }
+
+.social-icons a svg { height: 26px; width: 26px; }
+
+code { direction: ltr; }
+
+.first-entry { position: relative; display: flex; flex-direction: column; j=
+ustify-content: center; min-height: 320px; margin: var(--gap) 0 calc(var(--=
+gap) * 2) 0; }
+
+@media screen and (max-width: 600px) {
+  .first-entry { min-height: 260px; }
+}
+
+.first-entry .entry-header { overflow: hidden; display: -webkit-box; -webki=
+t-box-orient: vertical; -webkit-line-clamp: 3; }
+
+.first-entry .entry-header h2 { font-size: 34px; line-height: 1.3; }
+
+.first-entry .entry-content { margin: 14px 0px; font-size: 16px; -webkit-li=
+ne-clamp: 3; }
+
+.first-entry .entry-footer { font-size: 14px; }
+
+.home-info .entry-content { -webkit-line-clamp: unset; }
+
+.post-entry { position: relative; margin-bottom: var(--gap); padding: var(-=
+-gap); background: var(--entry); border-radius: var(--radius); transition: =
+transform 0.1s ease 0s; }
+
+.post-entry:active { transform: scale(0.96); }
+
+.tag-entry .entry-cover { display: none; }
+
+.entry-header h2 { font-size: 24px; }
+
+.entry-content { margin: 8px 0px; color: var(--secondary); font-size: 14px;=
+ line-height: 1.6; overflow: hidden; display: -webkit-box; -webkit-box-orie=
+nt: vertical; -webkit-line-clamp: 2; }
+
+.entry-footer { color: var(--secondary); font-size: 13px; }
+
+.entry-link { position: absolute; inset: 0px; }
+
+.entry-cover, .entry-isdraft { font-size: 14px; color: var(--secondary); }
+
+.entry-isdraft { display: inline; }
+
+.entry-cover { margin-bottom: var(--gap); text-align: center; }
+
+.entry-cover img { border-radius: var(--radius); pointer-events: none; widt=
+h: 100%; }
+
+.entry-cover a { color: var(--secondary); box-shadow: 0 1px 0 var(--primary=
+); }
+
+.post-header { margin: 24px auto var(--content-gap); }
+
+.post-title { margin-bottom: 2px; font-size: 40px; transform: translateX(-2=
+px); }
+
+.post-meta { color: var(--secondary); font-size: 14px; display: flex; flex-=
+wrap: wrap; }
+
+.post-meta .i18n_list li { display: inline-flex; list-style: none; margin: =
+auto 3px; box-shadow: 0 1px 0 var(--secondary); }
+
+.post-content { color: var(--content); }
+
+.post-content h3, .post-content h4, .post-content h5, .post-content h6 { ma=
+rgin: 24px 0px 16px; }
+
+.post-content h1 { margin: 40px auto 32px; font-size: 40px; }
+
+.post-content h2 { margin: 32px auto 24px; font-size: 32px; }
+
+.post-content h3 { font-size: 24px; }
+
+.post-content h4 { font-size: 16px; }
+
+.post-content h5 { font-size: 14px; }
+
+.post-content h6 { font-size: 12px; }
+
+.post-content a, .toc a:hover { box-shadow: 0 1px 0 var(--primary); }
+
+.post-content a code { margin: auto 0px; border-radius: 0px; box-shadow: 0 =
+-1px 0 var(--primary)inset; }
+
+.post-content del { text-decoration: none; background: linear-gradient(to r=
+ight,var(--primary) 100%,transparent 0) 0 50%/1px 1px repeat-x; }
+
+.post-content dl, .post-content ol, .post-content p, .post-content ul { mar=
+gin-bottom: var(--content-gap); }
+
+.post-content ol, .post-content ul { padding-inline-start: 20px; }
+
+.post-content li { margin-top: 5px; }
+
+.post-content li p { margin-bottom: 0px; }
+
+.post-content dl { display: flex; flex-wrap: wrap; margin: 0px; }
+
+.post-content dt { width: 25%; font-weight: 700; }
+
+.post-content dd { width: 75%; margin-inline-start: 0px; padding-inline-sta=
+rt: 10px; }
+
+.post-content dd ~ dd, .post-content dt ~ dt { margin-top: 10px; }
+
+.post-content table { margin-bottom: 32px; }
+
+.post-content table th, .post-content table:not(.highlighttable) td { min-w=
+idth: 80px; padding: 12px 8px; line-height: 1.5; border-bottom: 1px solid v=
+ar(--border); }
+
+.post-content table th { font-size: 14px; text-align: start; }
+
+.post-content table:not(.highlighttable) td code:only-child { margin: auto =
+0px; }
+
+.post-content .highlight, .post-content pre { margin: auto calc(var(--gap) =
+* -1) 32px; border-radius: var(--radius); background: var(--hljs-bg) !impor=
+tant; }
+
+.post-content li > .highlight { margin-inline-end: 0px; }
+
+.post-content ul pre { margin-inline-start: calc(var(--gap) * -2); }
+
+.post-content .highlight pre { margin: 0px; }
+
+.post-content .highlighttable { table-layout: fixed; }
+
+.post-content .highlighttable td:first-child { width: 40px; }
+
+.post-content .highlighttable td .linenodiv { padding-inline-end: 0px !impo=
+rtant; }
+
+.post-content .highlighttable td .highlight, .post-content .highlighttable =
+td .linenodiv pre { margin-bottom: 0px; }
+
+.post-content .highlighttable td .highlight pre code::-webkit-scrollbar { d=
+isplay: none; }
+
+.post-content .highlight span { background: 0px 0px !important; }
+
+.post-content code { margin: auto 4px; padding: 4px 6px; font-family: Menlo=
+, Monaco, "courier new", Courier, monospace; font-size: 0.78em; line-height=
+: 1.5; background: var(--code-bg); border-radius: 2px; }
+
+.post-content pre code { display: block; margin: auto 0px; padding: 10px; c=
+olor: rgba(255, 255, 255, 0.8); background: 0px 0px; border-radius: 0px; ov=
+erflow-x: auto; }
+
+.post-content blockquote { margin: 0 calc(var(--gap) * -1); padding: 0px 32=
+px; border-inline-start: 2px solid var(--primary); }
+
+.post-content hr { margin: 30px calc(var(--gap) * -1); height: 2px; backgro=
+und: var(--tertiary); border-top: 0px; border-bottom: 0px; }
+
+.post-content iframe { max-width: 100%; }
+
+.post-content img { border-radius: 4px; }
+
+.post-content figure > figcaption { color: var(--primary); font-size: 16px;=
+ font-weight: 700; margin: 24px 0px 16px; }
+
+.toc { margin-bottom: 40px; border: 1px solid var(--border); border-radius:=
+ var(--radius); padding: 0.5em; }
+
+.toc details summary { cursor: zoom-in; margin-inline-start: 20px; }
+
+.toc details[open] summary { cursor: zoom-out; }
+
+.toc .details { display: inline; font-weight: 500; }
+
+.toc blockquote { margin: 0px 20px; padding: 10px 20px; }
+
+.toc li ul { margin-inline-start: var(--gap); }
+
+.toc summary:focus { outline: 0px; }
+
+.post-footer { margin-top: 56px; }
+
+.post-tags li { display: inline-block; margin-inline-end: 3px; margin-botto=
+m: 5px; }
+
+.post-tags a, .share-buttons { border: 1px solid var(--tertiary); }
+
+.post-tags a { display: block; padding-inline: 14px; color: var(--secondary=
+); font-size: 14px; line-height: 34px; background: var(--code-bg); border-r=
+adius: 4px; }
+
+.post-tags a:hover { background: var(--border); }
+
+.share-buttons { margin-top: var(--gap); padding-inline-start: var(--radius=
+); border-radius: var(--radius); display: flex; overflow-x: auto; }
+
+.share-buttons a { margin-top: 10px; }
+
+.share-buttons a:not(:last-of-type) { margin-inline-end: 12px; }
+
+.share-buttons a svg { height: 30px; width: 30px; fill: currentcolor; trans=
+ition: transform 0.1s ease 0s; }
+
+.share-buttons svg:hover { transform: scale(0.96); }
+
+h1:hover .anchor, h2:hover .anchor, h3:hover .anchor, h4:hover .anchor, h5:=
+hover .anchor, h6:hover .anchor { display: inline-flex; color: var(--second=
+ary); margin-inline-start: 8px; font-weight: 500; }
+
+@media screen and (max-width: 600px) {
+  .post-content blockquote { margin: 0 calc(var(--gap) * -1); padding: 0px =
+21px; }
+}
+
+.buttons, .main .profile { display: flex; justify-content: center; }
+
+.main .profile { position: absolute; left: 0px; right: 0px; align-items: ce=
+nter; height: 80%; text-align: center; }
+
+.profile .profile_inner h1 { padding: 12px 0px; }
+
+.profile .profile_inner span { padding: 10px 0px; font-size: 18px; }
+
+.profile img { display: inline-table; border-radius: 50%; pointer-events: n=
+one; }
+
+@media screen and (max-width: 600px) {
+  .profile img { transform: scale(0.85); }
+}
+
+.buttons { flex-wrap: wrap; max-width: 400px; margin: 0px auto; }
+
+.button { background: var(--tertiary); border-radius: var(--radius); margin=
+: 8px; padding: 6px; transition: transform 0.1s ease 0s; }
+
+.button-inner { padding: 0px 8px; }
+
+.button:active { transform: scale(0.96); }
+
+*, ::after, ::before { box-sizing: border-box; }
+
+html { -webkit-tap-highlight-color: transparent; scroll-behavior: smooth; }
+
+@media screen and (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+a, body, h1, h2, h3, h4, h5, h6 { color: var(--primary); }
+
+body { font-family: -apple-system, BlinkMacSystemFont, "segoe ui", Roboto, =
+Oxygen, Ubuntu, Cantarell, "open sans", "helvetica neue", sans-serif; font-=
+size: 18px; line-height: 1.6; word-break: break-word; background: var(--the=
+me); }
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, sect=
+ion, table { display: block; }
+
+h1, h2, h3, h4, h5, h6 { line-height: 1.2; }
+
+h1, h2, h3, h4, h5, h6, p { margin-top: 0px; margin-bottom: 0px; }
+
+ul { padding: 0px; }
+
+a { text-decoration: none; }
+
+body, figure, ul { margin: 0px; }
+
+table { width: 100%; border-collapse: collapse; border-spacing: 0px; overfl=
+ow-x: scroll; word-break: keep-all; }
+
+button, input, textarea { padding: 0px; font: inherit; background: 0px 0px;=
+ border: 0px; appearance: none; }
+
+input, textarea { outline: 0px; }
+
+button, input[type=3D"button"], input[type=3D"submit"] { cursor: pointer; }
+
+input:-webkit-autofill, textarea:-webkit-autofill { box-shadow: 0 0 0 50px =
+var(--theme)inset; }
+
+img { display: block; max-width: 100%; }
+
+::-webkit-scrollbar { width: 10px; height: 6px; }
+
+::-webkit-scrollbar-track { background: var(--theme); }
+
+.list:not(.dark)::-webkit-scrollbar-track { background: var(--code-bg); }
+
+::-webkit-scrollbar-thumb { background: var(--tertiary); border-radius: var=
+(--radius); }
+
+::-webkit-scrollbar-thumb:hover { background: var(--secondary); }
+
+@media screen and (max-width: 800px) {
+  ::-webkit-scrollbar { width: 8px; height: 2px; }
+}
+
+.searchbox input { padding: 4px 10px; width: 100%; color: var(--primary); f=
+ont-weight: 700; border: 2px solid var(--tertiary); border-radius: var(--ra=
+dius); }
+
+.searchbox input:focus { border-color: var(--secondary); }
+
+#searchResults li { list-style: none; border-radius: var(--radius); padding=
+: 10px; margin: 10px 0px; position: relative; font-weight: 500; }
+
+#searchResults { margin: 10px 0px; width: 100%; }
+
+#searchResults li:active { transition: transform 0.1s ease 0s; transform: s=
+cale(0.98); }
+
+#searchResults a { position: absolute; width: 100%; height: 100%; top: 0px;=
+ left: 0px; outline: none; }
+
+.terms-tags li { display: inline-block; margin: 10px; font-weight: 500; }
+
+.terms-tags a { display: block; padding: 3px 10px; background: var(--tertia=
+ry); border-radius: 6px; transition: transform 0.1s ease 0s; }
+
+.terms-tags a:hover { background: var(--tertiary); transform: scale(0.96); =
+}
+
+:root { --gap: 24px; --content-gap: 20px; --nav-width: 1024px; --main-width=
+: 720px; --header-height: 60px; --footer-height: 60px; --radius: 8px; --the=
+me: #fff; --entry: #fff; --primary: rgba(0, 0, 0, 0.88); --secondary: rgba(=
+0, 0, 0, 0.56); --tertiary: rgba(0, 0, 0, 0.16); --content: rgba(0, 0, 0, 0=
+.88); --hljs-bg: #1c1d21; --code-bg: #f5f5f5; --border: #eee ; }
+
+@media screen and (max-width: 600px) {
+  :root { --gap: 14px ; }
+}
+
+.dark { --theme: #1d1e20; --entry: #2e2e33; --primary: rgba(255, 255, 255, =
+0.84); --secondary: rgba(255, 255, 255, 0.56); --tertiary: rgba(255, 255, 2=
+55, 0.16); --content: rgba(255, 255, 255, 0.64); --hljs-bg: #2e2e33; --code=
+-bg: #37383e; --border: #5b5d67 ; }
+
+.list { background: var(--code-bg); }
+
+.dark.list { background: var(--theme); }
+------MultipartBoundary--zT39g1aStESZ0ID1lf1C93JSzzQ68wapX8vLLKhSsW------

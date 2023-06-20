@@ -1,5 +1,5 @@
-# flyway-docker-mssql
-Příklad, který presentuje start mssql serveru s prázdnou databází a poté spuštění kontejneru s flyway nástrojem (pro versování databázových schémat). 
+# flyway-docker-mssql v docker compose
+Příklad, který presentuje start mssql serveru s prázdnou databází a poté spuštění kontejneru s flyway nástrojem (pro versování databázových schémat) - tentokrate v docker compose. 
 
 ## Prerequisites
 Nainstalovaný docker engine/cli, např. docker desktop.

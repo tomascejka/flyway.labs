@@ -11,7 +11,7 @@ IF [%opt%] EQU [y] (
 	echo ---------------------------------------------
 	echo Spusti mssql kontejner
 	echo ---------------------------------------------
-	docker run --name %appName% -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Flyway123" -p 1433:1433 -d %imgName%
+	docker run --rm --name %appName% -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Flyway123" -p 1433:1433 -d %imgName%
 	echo pockam 30s... start mssql serveru
 	TIMEOUT /T 30
 )
@@ -23,9 +23,14 @@ echo ---------------------------------------------
 docker exec -it %appName% /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "Flyway123" -Q "select name from sys.databases"
 pause
 
-REM -- spusti flyway
+REM -- spusti flyway, konfigurace mssql server je v conf/flyway.conf
 echo ---------------------------------------------
 echo Spusti FLYWAY - info prikaz
 echo ---------------------------------------------
 SET FLYWAY_DIR=C:\docker-volumes-data\labs\flyway\mssql
-docker run --rm --network="host" -v %FLYWAY_DIR%\data:/flyway/sql -v %FLYWAY_DIR%\driver:/flyway/drivers -v %FLYWAY_DIR%\conf:/flyway/conf flyway/flyway:%FLYWAY_VERSION% info
+REM docker run --rm --network="host" -v %FLYWAY_DIR%\data:/flyway/sql -v %FLYWAY_DIR%\driver:/flyway/drivers -v %FLYWAY_DIR%\conf:/flyway/conf flyway/flyway:%FLYWAY_VERSION% info
+
+docker run --rm --name="%FLYWAY_APPNAME%" --network="host" -v %FLYWAY_DIR%\data:/flyway/sql ^
+	-v %FLYWAY_DIR%\driver:/flyway/drivers ^
+	-v %FLYWAY_DIR%\conf:/flyway/conf ^
+	%FLYWAY_IMGNAME% info

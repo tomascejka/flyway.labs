@@ -1,35 +1,39 @@
-version: '3'
+# see https://dev.to/leopardorossi/sql-server-and-flyway-a-docker-approach-kdj
 services:
-  # @see https://github.com/microsoft/mssql-docker/issues/2#issuecomment-346786877
-  # @see https://stackoverflow.com/questions/69941444/how-to-have-docker-compose-init-a-sql-server-database
-  flyway:
-    container_name: 'flyway-compose-cli'
-    image: tocecz/flyway-docker-mssql
-    network_mode: "host"
-    command: -url=jdbc:sqlserver://localhost:1434;databaseName=flywaydb;trustServerCertificate=true -password=Flyway123 -user=sa
-    command: info
-    environment:
-      - FLYWAY_URL=jdbc:sqlserver://localhost:1434;databaseName=flywaydb;trustServerCertificate=true
-      - FLYWAY_USER=sa
-      - FLYWAY_PASSWORD=Flyway123
-    volumes:
-      - C:\docker-volumes-data\labs\flyway\mssql-compose\data:/flyway/sql
-      - C:\docker-volumes-data\labs\flyway\mssql-compose\driver:/flyway/drivers
-    depends_on:
-      - db
   #
   # MSSQL server se inicializuje sam interne - diky skriptum, viz dockerfile
   # docker/cmd spusti entrypoint.sh, kt. spustit import.sh, ktery spustit setup.sql
   #
   db:
-    container_name: 'flyway-compose-mssql'
-    build: 
-      context: .
-      #- dockerfile: Dockerfile-mssql
-    command: /bin/bash ./entrypoint.sh
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver-2022-database 
+    command: /bin/bash /scripts/entrypoint.sh
+    volumes:
+      - dbdata:/var/opt/mssql
+      - ./src/mssql:/scripts
     environment:
       - ACCEPT_EULA=Y
-      #- MSSQL_SA_PASSWORD=Flyway123
-      - SA_PASSWORD=Flyway123
+      - MSSQL_SA_PASSWORD=Flyway123
     ports:
-      - 1434:1433
+      - 1433:1433
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Flyway123 -Q 'SELECT 1' || exit 1"]
+      interval: 10s
+      retries: 10
+      start_period: 10s
+      timeout: 3s
+  flyway:
+    image: flyway/flyway:9.14.1-alpine
+    container_name: flyway-compose
+    command: info -connectRetries=60
+    environment:
+      - FLYWAY_URL=jdbc:sqlserver://localhost:1433;databaseName=flywaydb;trustServerCertificate=true
+      - FLYWAY_USER=sa
+      - FLYWAY_PASSWORD=Flyway123
+    volumes:
+      - ./src/flyway/data:/flyway/sql
+    network_mode: "host"
+    depends_on:
+      - db
+volumes:
+  dbdata:
